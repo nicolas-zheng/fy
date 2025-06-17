@@ -22,8 +22,9 @@ FROM alpine:3.20
 # 选用国内镜像源以提高下载速度
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tencent.com/g' /etc/apk/repositories \
     && apk add --update --no-cache openjdk21-jre \
-    && rm -f /var/cache/apk/*
+    && rm -f /var/cache/apk/* \
 
+ENV SPRING_PROFILES_ACTIVE=prod
 # 容器默认时区为UTC，如需使用上海时间请启用以下时区设置命令
 # RUN apk add tzdata && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo Asia/Shanghai > /etc/timezone
 
