@@ -20,7 +20,7 @@
 			"PolicyThreshold": 50
 		}
 	],
-	"envParams": {},                                
+	"envParams": {"SPRING_PROFILES_ACTIVE": "prod"},
 	"customLogs": "stdout",                         
 	"dataBaseName":"springboot_demo",               
 	"executeSQLs":[
